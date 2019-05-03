@@ -223,7 +223,7 @@ demo = {
     },
 
     initGoogleMaps: function(){
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+        var myLatlng = new google.maps.LatLng(25.791461, -108.984660);
         var mapOptions = {
           zoom: 13,
           center: myLatlng,
@@ -235,7 +235,7 @@ demo = {
 
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title:"Hello World!"
+            title:"RIMSA - Lo hacemos fácil!"
         });
 
         // To add the marker to the map, call setMap();
