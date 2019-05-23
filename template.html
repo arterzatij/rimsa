@@ -28,7 +28,6 @@
 
 <div class="wrapper">
     <div class="sidebar has-image">
-
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="/" class="simple-text">
@@ -37,7 +36,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a class="nav-link" href="ticket.html">
+                    <a class="nav-link" href="addTicket.html">
                         <i class="fas fa-plus-circle"></i>
                         <p>Nuevo Ticket</p>
                     </a>
@@ -73,23 +72,29 @@
                         <p>Pagos</p>
                     </a>
                 </li>
+
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <p>Salir</p>
+                    </a>
+                </li>
                 
                 <li class="nav-item active active-pro">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link" href="#">
                         <i class="far fa-question-circle"></i>
                         <p>¿Necesitas Ayuda?</p>
                     </a>
                 </li>
             </ul>
         </div>
-
         <div class="sidebar-background"></div>
     </div>
 
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg " color-on-scroll="500">
             <div class=" container-fluid  ">
-                <a class="navbar-brand" href="#"> Nuevo Ticket </a>
+                <span class="navbar-brand"> Template </span>
 
                 <button class="navbar-toggler navbar-toggler-right toggled" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar burger-lines"></span>
@@ -98,50 +103,33 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="dropdown">
-                                <i class="nc-icon nc-palette"></i>
-                                <span class="d-lg-none">Nuevo Ticket</span>
-                            </a>
-                        </li>
-                    </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <h5 class="mt-0 mb-0">Grupo NST<br><small>Jorge Couch</small></h5>
+                                <h5 class="mt-0 mb-0">
+                                    Grupo NST
+                                    <br>
+                                    <small class="m-0 p-0">Jorge Couch</small>
+                                </h5>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-block"">
                             <a class="nav-link" href="#" title="Salir">
                                 <i class="fas fa-sign-out-alt"></i>
+                                &nbsp;
                             </a>
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
 
-        <div class="content">
+        <main class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                Nuevo
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                Anterior
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p>Content here</p>
             </div>
-        </div>
+        </main>
 
     </div>
 </div>

@@ -43,7 +43,7 @@
                 </li>
                 <hr>
                 <li class="nav-item">
-                    <a class="nav-link" href="tickets.html">
+                    <a class="nav-link" href="#">
                         <i class="fa fa-clipboard"></i>
                         <p>Tickets</p>
                     </a>
@@ -94,7 +94,7 @@
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg " color-on-scroll="500">
             <div class=" container-fluid  ">
-                <span class="navbar-brand"> Ticket [<strong>Sucursal Sur - 456545</strong>] </span>
+                <span class="navbar-brand"> Nuevo Ticket </span>
 
                 <button class="navbar-toggler navbar-toggler-right toggled" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar burger-lines"></span>
@@ -113,7 +113,7 @@
                                 </h5>
                             </a>
                         </li>
-                        <li class="nav-item d-none d-lg-block"">
+                        <li class="nav-item d-none d-lg-block">
                             <a class="nav-link" href="#" title="Salir">
                                 <i class="fas fa-sign-out-alt"></i>
                                 &nbsp;
@@ -134,7 +134,7 @@
                                 <div class="form-group row">
                                     <label for="sucursal" class="col-sm-3 col-form-label">Sucursal</label>
                                     <div class="col-sm-9">
-                                        <input list="sucursales" class="form-control" id="sucursal" value="Sur" />
+                                        <input list="sucursales" class="form-control" id="sucursal"/>
                                         <datalist id="sucursales">
                                             <option value="Norte">
                                             <option value="Sur">
@@ -147,13 +147,13 @@
                                 <div class="form-group row">
                                     <label for="numeroControl" class="col-sm-3 col-form-label">No. de Control</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="numeroControl" value="456545">
+                                        <input type="text" class="form-control" id="numeroControl">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="especialidad" class="col-sm-3 col-form-label">Especialidad</label>
                                     <div class="col-sm-9">
-                                        <input list="especialidades" class="form-control" id="especialidad" value="Plomeria">
+                                        <input list="especialidades" class="form-control" id="especialidad">
                                         <datalist id="especialidades">
                                             <option value="Plomeria">
                                             <option value="Electricidad">
@@ -167,60 +167,48 @@
                                 <div class="form-group row">
                                     <label for="titulo" class="col-sm-3 col-form-label">Titulo</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="titulo" value="Fuga de agua">
+                                        <input type="text" class="form-control" id="titulo">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="descripcion">Descripcion detallada</label>
-                                    <textarea class="form-control" id="descripcion" rows="4">
-                                        Una detalla descripcion
-                                    </textarea>
+                                    <textarea class="form-control" id="descripcion" rows="4"></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <table class="table table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td>Foto 1</td>
-                                            <td>
-                                                <a href="#"><i class="fas fa-file-download"></i></a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Foto 2</td>
-                                            <td>
-                                                <a href="#"><i class="fas fa-file-download"></i></a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Foto 3</td>
-                                            <td>
-                                                <a href="#"><i class="fas fa-file-download"></i></a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        El reporte no. <strong>456545</strong> fue el último generado para este inmueble, con fecha <strong>Martes 15 de Junio del 2019</strong>.
+                                    </div>
+                                    <div class="card-footer text-right">
+                                        <a href="ticket.html">Detalles <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="custom-file">
+                                            <label class="custom-file-label" for="customFile">
+                                                <i class="fas fa-paperclip"></i>
+                                                Adjunte información técnica.
+                                            </label>
+                                            <input type="file" class="custom-file-input" id="customFile"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-body"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="ticket.html" class="btn btn-info btn-fill">Actualizar</a>
-                        <a href="index.html" class="btn btn-danger btn-fill">Eliminar</a>
+                        <a href="ticket.html" class="btn btn-info btn-fill pull-right">Subir</a>
                     </div>
                 </div>
             </form>
