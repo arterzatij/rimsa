@@ -28,6 +28,7 @@
 
 <div class="wrapper">
     <div class="sidebar has-image">
+
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="/" class="simple-text">
@@ -43,7 +44,7 @@
                 </li>
                 <hr>
                 <li class="nav-item">
-                    <a class="nav-link" href="tickets.html">
+                    <a class="nav-link" href="#">
                         <i class="fa fa-clipboard"></i>
                         <p>Tickets</p>
                     </a>
@@ -81,13 +82,14 @@
                 </li>
             </ul>
         </div>
+
         <div class="sidebar-background"></div>
     </div>
 
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg " color-on-scroll="500">
             <div class=" container-fluid  ">
-                <span class="navbar-brand"> Tablero </span>
+                <a class="navbar-brand" href="#"> Nuevo Ticket </a>
 
                 <button class="navbar-toggler navbar-toggler-right toggled" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar burger-lines"></span>
@@ -96,20 +98,23 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <i class="nc-icon nc-palette"></i>
+                                <span class="d-lg-none">Nuevo Ticket</span>
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <h5 class="mt-0 mb-0">
-                                    Grupo NST
-                                    <br>
-                                    <small class="m-0 p-0">Jorge Couch</small>
-                                </h5>
+                                <h5 class="mt-0 mb-0">Grupo NST<br><small>Jorge Couch</small></h5>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" title="Salir">
                                 <i class="fas fa-sign-out-alt"></i>
-                                &nbsp;
                             </a>
                         </li>
                     </ul>
@@ -119,76 +124,18 @@
 
         <div class="content">
             <div class="container-fluid">
-                <div class="row stats">
-                    <div class="col-12 col-md-6 col-lg-3">
+                <div class="row">
+                    <div class="col-12 col-md-6">
                         <div class="card">
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <div class="text-sm">Reportes por aprobar</div>
-                                        <h3 class="mb-0 mt-0 font-weight-bold text-secondary">10</h5>
-                                    </div>
-                                    <div class="col-3 p-0">
-                                        <i class="fa fa-clipboard fa-3x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-right">
-                                <a href="#">Detalles <i class="fas fa-arrow-circle-right"></i></a>
+                                Nuevo
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6">
                         <div class="card">
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <div class="text-sm">Visitas de igualas</div>
-                                        <h3 class="mb-0 mt-0 font-weight-bold text-secondary">5</h3>
-                                    </div>
-                                    <div class="col-3 p-0">
-                                        <i class="fa fa-calendar fa-3x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-right">
-                                <a href="#">Detalles <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <div class="text-sm">Servicios por facturar</div>
-                                        <h3 class="mb-0 mt-0 font-weight-bold text-secondary">3</h3>
-                                    </div>
-                                    <div class="col-3 p-0">
-                                        <i class="fa fa-file-invoice-dollar fa-3x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-right">
-                                <a href="#">Detalles <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <div class="text-sm">Servicios por pagar</div>
-                                        <h3 class="mb-0 mt-0 font-weight-bold text-secondary">4</h3>
-                                    </div>
-                                    <div class="col-3 p-0">
-                                        <i class="fa fa-file-invoice-dollar fa-3x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-right">
-                                <a href="#">Detalles <i class="fas fa-arrow-circle-right"></i></a>
+                                Anterior
                             </div>
                         </div>
                     </div>

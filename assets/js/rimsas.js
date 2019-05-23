@@ -1,19 +1,3 @@
-/*!
-
- =========================================================
- * Light Bootstrap Dashboard - v1.4.0
- =========================================================
-
- * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
 var searchVisible = 0;
 var transparent = true;
 
@@ -25,26 +9,14 @@ var navbar_initialized = false;
 $(document).ready(function(){
     window_width = $(window).width();
 
-    // check if there is an image set for the sidebar's background
-    lbd.checkSidebarImage();
-
     // Init navigation toggle for small screens
     lbd.initRightMenu();
 
-    //  Activate the tooltips
-    $('[rel="tooltip"]').tooltip();
-
-    $('.form-control').on("focus", function(){
-        $(this).parent('.input-group').addClass("input-group-focus");
-    }).on("blur", function(){
-        $(this).parent(".input-group").removeClass("input-group-focus");
-    });
-
     // Fixes sub-nav not working as expected on IOS
-$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+    $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
 });
 
-$(document).on('click', '.navbar-toggle', function(){
+$(document).on('click', '.navbar-toggle', function() {
     $toggle = $(this);
 
     if(lbd.misc.navbar_menu_visible == 1) {
@@ -83,16 +55,6 @@ $(window).on('resize', function(){
 lbd = {
     misc:{
         navbar_menu_visible: 0
-    },
-
-    checkSidebarImage: function(){
-        $sidebar = $('.sidebar');
-        image_src = $sidebar.data('image');
-
-        if(image_src !== undefined){
-            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
-            $sidebar.append(sidebar_container);
-        }
     },
 
     initRightMenu: debounce(function(){
