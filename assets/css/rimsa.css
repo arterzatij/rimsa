@@ -1456,6 +1456,10 @@ fieldset[disabled] .btn-neutral.active {
     color: #333333;
 }
 
+.input-group-append {
+    height: 40px;
+}
+
 .has-success .form-control,
 .has-error .form-control,
 .has-success .form-control:focus,
@@ -2700,6 +2704,11 @@ Copyright (c) 2015 Daniel Eden
     border-radius: 4px;
     background-color: #FFFFFF;
     margin-bottom: 30px;
+}
+
+.card--bt {
+    border-top-color: #cc833c;
+    border-top-width: 3px;
 }
 
 .card .card-image {
