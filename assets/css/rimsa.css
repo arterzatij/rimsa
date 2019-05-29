@@ -1872,11 +1872,6 @@ fieldset[disabled] .form-control {
     color: #9A9A9A;
 }
 
-.nav .nav-item .nav-link:hover,
-.nav .nav-item .nav-link:focus {
-    background-color: transparent;
-}
-
 .navbar {
     border: 0;
     font-size: 16px;
@@ -2042,6 +2037,10 @@ fieldset[disabled] .form-control {
     color: #FFFFFF;
     opacity: 0.9;
     filter: alpha(opacity=90);
+}
+
+.tab-content {
+    background-color: #FFF;
 }
 
 .navbar-transparent .navbar-brand:focus,
