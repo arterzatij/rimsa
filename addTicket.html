@@ -81,7 +81,7 @@
                     </nav>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="ytdReporte.html">
                         <i class="far fa-chart-bar"></i>
                         <p>Reportes</p>
                     </a>
@@ -148,8 +148,22 @@
         <main class="content">
             <form class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="card">
+                    <div class="col-12 col-md-4 col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        El reporte no. <strong>456545</strong> fue el último generado para este inmueble, con fecha <strong>Martes 15 de Junio del 2019</strong>.
+                                    </div>
+                                    <div class="card-footer text-right">
+                                        <a href="ticket.html">Detalles <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-6 order-md-first">
+                        <div class="card card--bt">
                             <div class="card-body">
                                 <div class="form-group row">
                                     <label for="sucursal" class="col-sm-3 col-form-label">Sucursal</label>
@@ -197,18 +211,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-8 col-lg-6">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        El reporte no. <strong>456545</strong> fue el último generado para este inmueble, con fecha <strong>Martes 15 de Junio del 2019</strong>.
-                                    </div>
-                                    <div class="card-footer text-right">
-                                        <a href="ticket.html">Detalles <i class="fas fa-arrow-circle-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -226,10 +230,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <a href="ticket.html" class="btn btn-info btn-fill pull-right">Subir</a>
-                    </div>
+                <div class="row justify-content-end">
+                    <p class="col-12 col-sm-4 col-md-3 col-lg-2 order-sm-last">
+                        <button type="button" class="btn btn-primary btn-fill btn-block">Subir</button>
+                    </p>
+                    <p class="col-12 col-sm-4 col-md-3 col-lg-2  order-sm-first">
+                        <button type="button" class="btn btn-secondary btn-block">Cancelar</button>
+                    </p>
                 </div>
             </form>
         </main>
