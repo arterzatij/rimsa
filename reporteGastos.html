@@ -83,11 +83,31 @@
                         </li>
                     </nav>
                 </li>
-                <li>
-                    <a class="nav-link" href="ytdReporte.html">
-                        <i class="far fa-chart-bar"></i>
+                <li class="nav-item accordion">
+                    <a class="nav-link" data-toggle="collapse" data-target="#nav-reportes">
+                        <i class="fa fa-chart-bar"></i>
                         <p>Reportes</p>
                     </a>
+                    <nav id="nav-reportes" class="collapse">
+                        <li class="nav-item">
+                            <a class="nav-link" href="reporteGastos.html">
+                                <i class="fas fa-money-check-alt"></i>
+                                <p class="text-right">Reporte de Gastos</p>
+                            </a>
+                        </li>
+                        <!--li class="nav-item">
+                            <a class="nav-link" href="sucursales.html">
+                                <i class="far fa-calendar-check"></i>
+                                <p class="text-right">Igualas Activas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sucursalesNoIguala.html">
+                                <i class="fa fa-calendar"></i>
+                                <p>Sin Igualas</p>
+                            </a>
+                        </li-->
+                    </nav>
                 </li>
                 <li>
                     <a class="nav-link" href="#">
@@ -117,7 +137,7 @@
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg " color-on-scroll="500">
             <div class=" container-fluid  ">
-                <span class="navbar-brand"> Inversion del año hasta la fecha </span>
+                <span class="navbar-brand"> Gasto de Mantenimiento </span>
 
                 <button class="navbar-toggler navbar-toggler-right toggled" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar burger-lines"></span>
@@ -150,9 +170,29 @@
 
         <main class="content">
             <div class="container-fluid">
-                <div class="card card--bt">
-                    <div class="card-body">
-                        <canvas id="canvas"></canvas>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card card--bt">
+                            <div class="card-body">
+                                <canvas id="last-three-years"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card card--bt">
+                            <div class="card-body">
+                                <canvas id="last-year"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card--bt">
+                            <div class="card-body">
+                                <canvas id="ytd"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -265,30 +305,63 @@
         };
 
         window.chartColors = {
-            red: 'rgb(255, 99, 132)',
             orange: 'rgb(255, 159, 64)',
             yellow: 'rgb(255, 205, 86)',
             green: 'rgb(75, 192, 192)',
             blue: 'rgb(54, 162, 235)',
             purple: 'rgb(153, 102, 255)',
-            grey: 'rgb(201, 203, 207)'
+            grey: 'rgb(201, 203, 207)',
+            red: 'rgb(255, 99, 132)'
         };
 
         window.randomScalingFactor = function() {
             return Math.round(Samples.utils.rand(2250, 105658));
         };
         
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var MONTHS = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Deciembre'];
         var color = Chart.helpers.color;
         Samples.utils.srand(Date.now());
-        var barChartData = {
-            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+
+        var lastThreeYearsData = {
+            labels: ['2017', '2018', '2019 YTD'],
             datasets: [{
                 label: 'Correctivos',
                 backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
                 borderColor: window.chartColors.red,
                 borderWidth: 1,
                 data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'Igualas',
+                backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.blue,
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }]
+        };
+
+        var lastYearData = {
+            labels: MONTHS,
+            datasets: [{
+                label: 'Correctivos',
+                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.red,
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
                     randomScalingFactor(),
                     randomScalingFactor(),
                     randomScalingFactor(),
@@ -305,16 +378,55 @@
                     randomScalingFactor(),
                     randomScalingFactor(),
                     randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }]
+        };
+
+        var ytdData = {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+            datasets: [{
+                label: 'Correctivos',
+                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.red,
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'Igualas',
+                backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.blue,
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
                     randomScalingFactor()
                 ]
             }]
         };
 
         window.onload = function() {
-            var ctx = document.getElementById('canvas').getContext('2d');
-            window.myBar = new Chart(ctx, {
+
+            var lastThreeYeasrCtx = document.getElementById('last-three-years').getContext('2d');
+            window.lastYearBard = new Chart(lastThreeYeasrCtx, {
                 type: 'bar',
-                data: barChartData,
+                data: lastThreeYearsData,
                 options: {
                     responsive: true,
                     legend: {
@@ -322,10 +434,43 @@
                     },
                     title: {
                         display: true,
-                        text: 'Inversion del año hasta la fecha'
+                        text: 'Inversión últimos tres años a la fecha'
                     }
                 }
             });
+
+            var lastYearCtx = document.getElementById('last-year').getContext('2d');
+            window.lastYearBard = new Chart(lastYearCtx, {
+                type: 'bar',
+                data: lastYearData,
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Inversión del año anterior'
+                    }
+                }
+            });
+
+            var ytdCtx = document.getElementById('ytd').getContext('2d');
+            window.myBar = new Chart(ytdCtx, {
+                type: 'bar',
+                data: ytdData,
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Inversión del año hasta la fecha'
+                    }
+                }
+            });
+
         };
     </script>
 
