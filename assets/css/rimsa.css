@@ -2765,6 +2765,10 @@ Copyright (c) 2015 Daniel Eden
     padding: 15px 15px 10px 15px;
 }
 
+.canvas--bar-chart {
+    min-height: 200px;
+}
+
 .card .card-header {
     padding: 15px 15px 0;
     background-color: #FFFFFF;
